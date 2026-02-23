@@ -1,0 +1,113 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #666;
+    font-family: "Lato", sans-serif;
+}
+
+/* Parallax Images */
+.pimage1 {
+    min-height: 100vh;
+    background-image: url("./images/image1.jpeg");
+}
+
+.pimage2 {
+    min-height: 60vh;
+    background-image: url("./images/image2.jpg");
+}
+
+.pimage3 {
+    min-height: 60vh;
+    background-image: url("./images/image3.jpg");
+}
+
+.pimage1,
+.pimage2,
+.pimage3 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Text on Images */
+.ptext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: #000;
+    font-size: clamp(16px, 4vw, 27px);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Text Background */
+.textbg {
+    background-color: #313534;
+    color: #fff;
+    padding: 15px 25px;
+    display: inline-block;
+}
+
+/* Content Section */
+.second-text {
+    padding: 40px 8%;
+    text-align: center;
+}
+
+.section_col {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section_col_dark {
+    background-color: #666;
+    color: #f4f4f4;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+
+    /* Disable parallax on phones */
+    .pimage1,
+    .pimage2,
+    .pimage3 {
+        background-attachment: scroll;
+        min-height: 50vh;
+    }
+
+    .ptext {
+        font-size: 18px;
+        letter-spacing: 2px;
+        width: 95%;
+    }
+
+    .textbg {
+        padding: 12px 18px;
+    }
+
+    .second-text {
+        padding: 25px 6%;
+    }
+}
+
+/* 📱 Small Phones */
+@media (max-width: 480px) {
+
+    .ptext {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .second-text {
+        padding: 20px 5%;
+    }
+}
